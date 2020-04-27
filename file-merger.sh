@@ -1,10 +1,12 @@
 #!/bin/bash
 src_path=$1
 file_type=$2
-out_file=$src_path/../out/Out.$file_type
+main_class=$(grep "^mainClass" "$src_path/../file-merger.properties" | cut -d'=' -f2)
+out_file=$src_path/../out/$main_class.$file_type
 
 #echo "src: $src_path"
 #echo "type: $file_type"
+#echo "main: $main_class"
 #echo "out: $out_file"
 
 # clear out_file
