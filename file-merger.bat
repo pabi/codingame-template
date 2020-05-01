@@ -1,2 +1,2 @@
 
-bash ./file-merger.sh %1 %2
+bash ./file-merger %1 %2
